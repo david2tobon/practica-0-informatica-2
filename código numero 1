@@ -1,0 +1,20 @@
+// Codigo número 1
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+    int i = 10;  //se crea una varible entera y se le da el valor de 10
+    float a = 1000.0; //se crea una variable flotante y se le da el valor de 1000.0
+    
+    while(i > 0) // mientras i sea mayor que cero el ciclo va  aseguir y se ejecutaran las instrucciones de lo contrario termina el ciclo
+    {
+        i /= 2; // se hace una diviciones iterativas i=i/2 hasta que i<0 hay el ciclo para
+        a /= 10; // se hace una diviciones iterativas a=a/10 hasta que i<0 asi (1000.0/10)=100 , (100/10)=10
+                 //  (10/10)=1 y se va a repetir esto hasta que i>0
+    }            // a=0.1
+    
+    cout<<"El valor final de la variable 'a' es: "<<a<<endl; // se le muestran los datos finales de los calculos al usuario
+    return 0;
+}
