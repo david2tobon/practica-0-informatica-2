@@ -1,0 +1,23 @@
+// Codigo número 3
+#include <iostream>
+
+using namespace std; // 
+
+int main() 
+{
+    for(int i = 0; i < 4; ++i) // se hace un ciclo  for   en donde se inicializa la varible entera i desde 0 hasta que i sea menor a 4 y que este ciclo valla aumentando de 1 en 1
+
+    {
+        switch(i)
+        {
+            case 0: cout<<"0"; //en el caso 0 lo que pasa esque empieza el ciclo 1 y imprime 0 y continua el ciclo imprimiendo 1  # hasta aqui el programa muestra 01#
+            case 1: cout<<"1"; continue;//el mismo ciclo 1 sigue y imprime 1 continua el ciclo y imprime 2              # hasta aqui el programa muestra 0112 #
+            case 2: cout<<"2"; break; // aqui se imprime 2 y se empieza un nuevo ciclo (ciclo2) y luego de esto se sale del ciclo y imprime *   # hasta aqui el programa muestra 0112*  #
+            default: cout<<"D";break;//aqui empieza un nuevo ciclo (ciclo 3) y imprime D y sale del ciclo; como salio del ciclo se imprime *  # hasta aqui el programa muestra 0112*d*  #
+        }
+        //continue sirve para que no salga del ciclo sino que siga con el siguiente caso dentro del mismo ciclo
+        // break esto se pone para q no se salte al siguiente caso dentro del mismo  ciclo
+        cout<<"*";//esto se va a mostrar cada que empiense un nuevo ciclo ciclo
+    }
+    return 0;
+}
