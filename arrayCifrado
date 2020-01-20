@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+
+void cifraData(int arr[], int rondas)
+{
+    // Complete esta función siguiendo las recomendaciones anteriores
+	printf("Escriba el numero ");
+    scanf("%d",&dato);
+}
+
+int main()
+{
+    int trama[20]={1,45,92,216,28,63,}; //Trama
+    cifraData(trama, 3); // Llamado de ejemplo
+	nt main(int argc, char *argv[])
+{
+
+    int  i,x=0,trama[20], n=20, dato, centro,inf=0,sup=n-1;
+  
+    for (i=0;i<20;i++){
+        printf("Escriba un número");
+        scanf("%d",&vector[i]);
+    }
+  
+    
+  
+    while(inf<=sup)
+    {
+     centro=(sup+inf)/2;
+     if (vector[centro]==dato)
+     {
+        printf("Existe\n");
+        x=1;
+        break;
+     } 
+     else if(dato < vector [centro] )
+     {
+        sup=centro-1;
+     }
+     else
+     {
+       inf=centro+1;
+     }
+    }
+   
+    if (x==0)
+    
+    return 0;
+}
