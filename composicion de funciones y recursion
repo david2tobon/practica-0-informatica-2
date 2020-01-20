@@ -1,0 +1,71 @@
+#include <iostream> 
+using namespace std; 
+
+// Función que retorna el MCD entre dos números a y b
+
+int mcd(int a,int b){    // se crea la funcion
+    if(a==0){    // se pone la condicion que si a es igual a 0 me retorne b
+        return b;// retorna el valor de b
+    }
+    return mcd(b%a,a);  //retorna la funcion
+}
+
+int main()
+{
+    int a , b;
+    cout<<"ingrese el primer numero:"<<endl;// se le pide el primer numero entero al usuario
+    cin>>a;
+    cout<<"ingrese el segundo  numero:"<<endl;// se le pide el segundo numero al usuario
+    cin>>b;
+
+    cout<<"el maximo comun divisor es:"<<mcd(a,b)<<endl;// se muestra el maximo comun divisor de los  numero ingresados por el usuario
+    return 0;
+}
+
+// Función para encontrar el MCD de un arreglo de números
+#include <iostream>
+
+using namespace std;
+int mcdArreglo(int arr[]){
+    int  mcd=0, residuo; // se declara las variables del programa
+
+
+    for(int i=0;i<4;i++){  // se hace un ciclo que comiense desde i=0 hasta que i sea menor a cuatro y que valla en pasos de uno en uno
+
+        if(i==1){  // 
+            mcd=arr[i];
+        }
+
+        else{
+
+            do{
+                residuo=mcd%arr[i];
+                if(residuo!=0){
+                    mcd=arr[i];
+                    arr[i]=residuo;
+
+                }
+                else{
+                    mcd=arr[i];
+
+                }
+
+            }while(residuo!=0);
+
+
+        }
+
+    }
+    cout<<"el mcd es:"<<mcd<<endl; //  se le muestran los resultados al usuario
+}
+
+
+// Ejecución de la aplicación (No modifique esta función!)
+int main()
+{
+    int arr[]={2,4,6,8,16};
+    mcdArreglo(arr);
+
+
+    return 0;
+}
